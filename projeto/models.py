@@ -11,7 +11,7 @@ class Produto(models.Model):
     index = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=60)
     descricao = models.CharField(max_length=200)
-    preco = models.IntegerField()
+    preco = models.DecimalField(max_digits=5, decimal_places=2)
     ativo = models.BooleanField(default=False)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     usuario =  models.ForeignKey(User, on_delete=models.CASCADE)
