@@ -15,6 +15,5 @@ def lista(request):
         'usuario'
         ) # retorna queryset de dicionários
     lista_produto = list(produtos) # converte o queryset em lista
-    print(lista_produto)
 
     return JsonResponse(lista_produto, safe=False)
